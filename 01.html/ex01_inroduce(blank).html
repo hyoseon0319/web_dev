@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개</title>
+</head>
+<body>
+    <!-- 공간을 나눠주는 태그 -->
+    <div id="top">
+        <!-- 바로 가기를 위한 링크 태그 (앵커# 사용) -->
+        <a href="#info">인적사항</a>
+        <a href="#like">좋아하는 음식</a>
+        <a href="#subject">인생 목표</a>
+        <a href="#skill">사용할 수 있는 언어</a>
+        <a href="#youtube">유튜브</a>
+    </div>
+        <!-- 공간을 나눠주는 태그 -->
+    <div>
+        <!-- 가장 큰 제목 태그 -->
+        <h1>자기소개</h1>
+        <!-- 수평선 태그로 구분 -->
+        <hr>
+        <!-- 두번째로 큰 제목 태그 -->
+        <h2 id="info">인적사항</h2>
+        <!-- 이미지 태그 - 가로 320px, 세로 240px -->
+        <img src="https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg" alt="김예제" width="400px" height="300px"><br>
+        <!-- 단락을 구분해주는 태그 -->
+        <p> 
+            <!-- 왼쪽 항목들을 모두 굵게 오른쪽 내용 다음엔 줄바꿈 태그-->
+            <b>이름</b> : 허효선<br>
+            <b>성별</b> : 여성<br>
+            <!-- 한 단계 글씨체 작게 + 취소선 표시 -->
+            <b>나이</b> : <small><del>마음만큼은</del></small>스무살
+        </p>
+        <!-- 수평선 태그로 구분 -->
+        <hr>
+        <!-- 두번째로 큰 제목 태그 -->
+        <h2 id="like">좋아하는 음식</h2>
+        <!-- 순서가 없는 리스트 -->
+        <ul>
+            <li>새우</li>
+            <li>양갈비</li>
+            <!-- 밑줄로 항목 강조 + 오른쪽 추가 내용을 형광펜 태그 표시 -->
+            <li><ins>장어</ins> <mark>돈이 없어서 못먹음</mark></li>
+        </ul>
+        <!-- 수평선 태그로 구분 -->
+        <hr>
+        <h2 id="subject">인생 목표</h2>
+        <!-- 순서가 있는 리스트 -->
+        <ol>
+            <li>공부를 열심히 한다</li>
+            <li>기업에 취직을 한다</li>
+            <!-- 돈에 기울게 설정 -->
+            <li><i>돈</i>을 많이 번다</li>
+        </ol>
+        <!-- 수평선 태그로 구분 -->
+        <hr>
+        <h2 id="skill">사용할 수 있는 언어</h2>
+        <!-- 정의 리스트 -->
+        <dl>
+            <!-- 용어를 설명하는 태그에는 모두 진하게(굵게) 처리 -->
+            <dt><b>HTML</b></dt>
+            <dd>문서의 내용을 구성</dd> 
+            <dt><b>CSS</b></dt>
+            <dd>문서의 모양을 설정</dd> 
+            <dt><b>JavaScript</b></dt>
+            <dd>문서에 기능을 추가</dd> 
+        </dl>
+        <!-- 수평선 태그로 구분 -->
+        <hr>
+        <!-- 두번째로 큰 제목 태그 -->
+        <h2 id="youtube">코딩 공부를 위한 유튜브</h2>
+        <table border="1" >
+            <!-- 테이블 제목 -->
+            <caption>유튜브 목록</caption>
+            <!-- 테이블 열 제목 -->
+            <thead>
+                <!-- 테이블 행 -->
+                <tr>
+                    <!-- 테이블 제목 열 -->
+                    <th>이름</th>
+                    <th>주소</th>
+                    <th>영상</th>
+                </tr>
+            </thead>
+            <!-- 테이블 내용 -->
+            <tbody>
+                <!-- 테이블 행 -->
+                <tr>
+                    <!-- 테이블 열 -->
+                    <td>생활코딩</td>
+                    <!-- 유튜브 채널 링크 -->
+                    <td><a href="https://youtu.be/tZooW6PritE" target="_blank">https://youtu.be/tZooW6PritE</a></td>
+                    <!-- 유튜브 영상 넣기 -->
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/tZooW6PritE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                </tr>
+                <tr>
+                    <!-- 테이블 열 -->
+                    <td>김왼손의 왼손코딩</td>
+                    <td><a href="https://youtu.be/c2mpe9Xcp0I" target="_blank">https://youtu.be/c2mpe9Xcp0I</a></td>
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/c2mpe9Xcp0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                    </tr>
+                <tr>
+                    <td>알고리즘 투게더 with 거니</td>
+                    <td><a href="https://youtu.be/cWH49IKDIiI" target="_blank">https://youtu.be/cWH49IKDIiI</a></td>
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLLcbGhhl4sQCiZxLuqDDDH6q-rc4wyaKe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 맨 위에 있는 요소로 바로 가기 -->
+        <a href="#top">맨 위로 가기(↑)</a>
+    </div>
+</body>
+</html>
