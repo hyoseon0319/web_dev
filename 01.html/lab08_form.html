@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+</head>
+<body>
+    <h1>로그인 폼</h1>
+    <!-- 폼 (form) : 사용자의 입력을 받는 태그 -->
+    <!-- action 속성 : 폼 데이터를 받을 웹페이지의 주소 -->
+    <form action="">
+        ID : <input type="text"><br>
+        PW : <input type="password"><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h1>네이버 검색 폼</h1>
+    <!-- get 방식 : 입력받은 데이터를 주소창을 통해 전달 -->
+    <form action="https://search.naver.com/search.naver" method="get">
+        <input type="text" name="query">
+        <input type="submit" value="검색">
+    </form>
+    <hr>
+    <h1>구글 검색 폼</h1>
+    <form action="https://www.google.com/search" method="get" target="_blank">
+        <input type="text" name="query" minlength="3">
+        <input type="submit" value="검색">
+    </form>
+    <hr>
+    
+    <h1>input 태그</h1>
+    <h2>텍스트 입력</h2>
+    input text <input type="text" name="test" placeholder="이름을 입력해주세요" size="20" maxlength="10"><br>
+    input text <input type="text" name="test" placeholder="이름을 입력해주세요" size="30" maxlength="20" ><br>
+    
+    input password <input type="password"><br>
+    
+    <textarea cols="30" rows="10">
+        텍스트에리어
+    </textarea><br>
+    
+        나라이름 : <input type="text" list="country">
+        <datalist id="country">
+            <option value="한국">
+            <option value="미국">
+            <option value="일본">
+            <option value="중국">
+        </datalist>
+
+        siat 과정 : <input type="text" list="siat">
+        <datalist id="siat">
+            <option value="sw개발">
+            <option value="정보보안">
+            <option value="웹디자인">
+            <option value="사무지원">
+        </datalist>
+        <hr>
+        <h1>버튼 만들기</h1> 
+        <!-- 2가지 버튼 생성방법 input type, button type-->
+        <input type="button" value="새 버튼1" onclick="alert('버튼을 누르셨네요.')"><br>
+        <button type="button">새 버튼2</button>
+        <form action="">
+            <input type="text" name="text"> 
+            <!-- input:submit -->
+            <!-- submit과 reset 중요함 -->
+            <!-- 입력해야 지워짐 -->
+            <input type="submit" value="제출"> 
+            <input type="reset" value="초기화">
+            <button type="reset">초기화2</button>
+            <button type="submit">제출2</button>
+        </form>
+        <!-- https://www.flaticon.com/ -->
+        <!-- input:image -->
+        <input type="image" src="https://image.flaticon.com/icons/svg/2538/2538993.svg" witth="100px" height="100px" alt="">
+        <button type="button"><img src="https://image.flaticon.com/icons/svg/2538/2538993.svg" witth="100px" height="100px" alt="" onclick="alert('와이파이')"></button>
+        <hr>
+        <input type="date">
+        <hr>
+        <h1>선택형 입력</h1>
+        <!-- 목록을 보여주고 그 중에 사용자가 선택하게 하는 것 -->
+        <h2>체크박스</h2>
+        <!-- input:checkbox -->
+    <form action="">
+        <input type="checkbox" name="rock" value="t">락
+        <input type="checkbox" name="ballad" value="t">발라드
+        <input type="checkbox" name="classic" value="t">클래식
+        <input type="checkbox" name="dance" value="t" checked>댄스
+        <button type="submit">제출</button>
+    </form>
+    <hr>
+
+    <h2>라디오 버튼</h2>
+    <form action="">
+    <input type="radio" name="fast" value="1">롯데리아  
+    <input type="radio" name="fast" value="2">맥도날드  
+    <input type="radio" name="fast" value="3" checked>KFC  
+    <input type="radio" name="fast" value="4">버거킹  
+    <input type="radio" name="fast" value="5">맘스터치  
+    <input type="submit">
+    </form>
+
+    <h2>콤보박스</h2>
+    <!-- input을 안씀 -->
+    <form action="">
+        <select name="food" id="">
+            <option value="1">김치찌개</option>
+            <option value="2" selected>된장찌개</option>
+            <option value="3">순두부찌개</option>
+        </select>
+        <input type="submit">
+    </form>
+    <!-- 라벨링 2가지 방법 존재함 -->
+    <h1>label</h1>
+    <label>ID : <input type="text"></label>
+    <label for="pw">PW :</label><input type="password" name="" id="pw">
+    <h1>fieldset</h1>
+    <form action="">
+        <fieldset>
+            <legend>자기소개</legend>
+            <label> 이름 : <input type="text" name="name"></label>
+            <label> 성별 : <label><input type="radio" name="gender" value="m" id="">남성</label><label><input type="radio" name="gender" value="f" id="">여성</label></label>
+            <!-- 이중라벨 -->
+        </fieldset>
+
+        <fieldset>
+            <legend>좋아하는 음식</legend>
+            <select name="food" id="">
+                <option value="1">새우</option>
+                <option value="2">연어</option>
+                <option value="3">참치</option>
+            </select>
+        </fieldset>
+        <input type="submit">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+</body>
+</html>
