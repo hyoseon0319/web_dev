@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 스타일</title>
+    <!-- <link rel="stylesheet" href="mystyle.css"> 시점 문제 -->
+    <style>
+         h3 { 
+            background-color: lightgreen;
+        }
+        </style>
+        <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h1>CSS 적용 스타일</h1>
+    <h2>인라인(inline) 스타일</h2>
+    <p style="background-color:cadetblue;">인라인 스타일 적용 되었습니다.</p>
+    <!--  선택자가 필요없음 ( 태그 안에 스타일이라는 속성을 적용시켜서 그 안에 css문법에 따라 속성을 넣어주는 방식 ) -->
+    <!-- 인라인 스타일을 쓰는건 별로 추천하지 않음 -->
+    <!-- 스타일 속성이 있는 태그만 적용받음 -->
+    <p>인라인 스타일 적용 될까요?</p>
+    <hr><br><br>
+
+    <!-- 내부 스타일 시트 (= 임베딩 스타일) -->
+    <h2>내부 스타일 시트(임베딩 스타일)</h2>
+    <h3>내부 스타일 적용하겠습니다</h3>
+    <h3>내부 스타일 적용하겠습니다2</h3>
+    <h3 style="background-color: hotpink;">내부 스타일 적용 + 인라인 스타일</h3>
+    <br><br>
+
+    <h2>외부 스타일 시트(링크 스타일)</h2>
+    <div>안녕하세요 저를 쓰지마세요!</div>
+    <br><br>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 사이즈</title>
+    <style>
+        /* 절대 크기 & 상대 크기 */
+        div {
+            border: 1px solid grey;
+            background-color: lightblue;
+        }
+
+        .px {
+            /* 스크린의 픽셀(pixel)을 기준으로 하는 절대적 크기 */
+        }
+
+        .percent {
+            /* 브라우저 크기의 % */
+        }
+
+        .em {
+            /* 자신의 폰트 크기가 1이라고 할 때 배수 단위 */
+        }
+
+        .em2 {
+            /* 상위 요소의 폰트 크기를 상속 받음 */
+        }
+
+        .rem {
+            /* 최상위 요소 (html)의 폰트 크기 기준 (상속 X) */
+        }
+
+        .rem2 {
+            /* 상위 요소의 폰트 크기에 영향 받지 않음 */
+        }
+
+        /* 최대 & 최소 */
+        .maxmin {
+            /* 300px ~ 600px 사이에서 화면에 50%를 차지하는 요소 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>크기 조정</h1>
+    <h2>절대 크기 & 상대 크기</h2>
+    <div>
+        기본 설정은 auto
+        (가로 100%, 세로는 컨텐츠 양에 따라 달라짐)
+    </div>
+    <br>
+    <div class="px">
+        px를 통한 크기 조정
+    </div>
+    <br>
+    <div class="percent">
+        %를 통한 크기 조정
+    </div>
+    <br>
+    <div class="em">
+        em을 통한 크기 조정
+        <div class="em2">
+            em 속 em
+        </div>
+    </div>
+    <br>
+    <div class="rem">
+        rem을 통한 크기 조정
+        <div class="rem2">
+            rem 속 rem
+        </div>
+    </div>
+    <br>
+    <hr>
+    <h2>최대 최소</h2>
+    <div class="maxmin">
+        상대적으로 크기가 변하는 요소에 대해
+        최대&최소값을 지정해 줄 수 있음
+    </div>
+    <img style="width: 100%; height: auto; max-width: 800px; max-height: 400px"
+        src="https://cdn.pixabay.com/photo/2020/01/11/13/22/freedom-4757533__480.jpg" alt="">
+    
+</body>
+
+</html>
