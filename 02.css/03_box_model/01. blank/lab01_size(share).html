@@ -14,27 +14,45 @@
         }
 
         .px {
-            /* 스크린의 픽셀(pixel)을 기준으로 하는 절대적 크기 */
+        /* 스크린의 픽셀(pixel)을 기준으로 하는 절대적 크기 */
+            width: 320px;
+            height: 160px;
         }
 
         .percent {
-            /* 브라우저 크기의 % */
+         /* 브라우저 크기의 % */
+         /* 상위요소에 width나 height가 지정됐을 경우 해당만큼 % 적용 */
+            width: 50%;
+            height: 200px;
         }
 
         .em {
             /* 자신의 폰트 크기가 1이라고 할 때 배수 단위 */
+            font-size: 20px;
+            width: 10em;
+            height: 10em;
         }
 
         .em2 {
             /* 상위 요소의 폰트 크기를 상속 받음 */
+            width: 5em;
+            height: 5em;
         }
 
-        .rem {
+        .rem { 
+            font-size: 20px;
+            /* em이었다면 반응해서 변경됐을 것 */
+            width: 20rem;
+            height: 20rem;
+            
             /* 최상위 요소 (html)의 폰트 크기 기준 (상속 X) */
         }
 
         .rem2 {
             /* 상위 요소의 폰트 크기에 영향 받지 않음 */
+            width: 5rem;
+            height: 5rem;
+
         }
 
         /* 최대 & 최소 */
@@ -59,6 +77,7 @@
     <br>
     <div class="percent">
         %를 통한 크기 조정
+        <div style="height: 20%;">%</div>
     </div>
     <br>
     <div class="em">

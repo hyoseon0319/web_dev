@@ -64,13 +64,18 @@
         .bgsize {
             height: 240px;
             background-image: url(https://cdn.pixabay.com/photo/2016/02/19/10/13/nght-sky-1209124_960_720.jpg);
+            
+            /* background-size를 사용하여 배경 이미지의 크기를 변경할 수 있다. */
+           
             /* contain은 모든 이미지가 보일 수 있게
             가장 짧은 면을 기준으로 사이즈 변경 */
+            /* background-size: contain; */
 
             /* cover는 가장 긴 면을 기준으로 덮어줄 수 있게 설정
                 이미지가 짤릴 수 있음
              */
-
+             background-size : cover;
+            background-size: 200px 10%;
             /* px % 등으로 직접 사이즈 지정 가능 */
         }
 
@@ -78,10 +83,23 @@
             height: 500px;
                     /* 방향 */
                     /* 본인이 쓰고 싶은 색깔의 수 - 1 분의 1 씩 % 지정 */
-        }
+        background-image: linear-gradient(
+            to top right, #ffc7c7, #ff80b0,#9399ff,#a9fffd
+            /* to bottom left, lightblue, lightpink, white */
+        );
+                }
 
         .bginsta {
             height: 500px;
+            background-image: linear-gradient(
+                45deg, 	#feda75, #fa7e1e, #d62976 ,#962fbf, #4f5bd5
+            );
+            /*  
+            background-image: linear-gradient(
+                315deg, 	#feda75, #fa7e1e, #d62976 ,#962fbf, #4f5bd5
+            );  */
+        
+        
                     /* xxdeg */
                     /* 본인이 쓰고 싶은 색깔의 수 - 1 분의 1 씩 % 지정 */
         }
