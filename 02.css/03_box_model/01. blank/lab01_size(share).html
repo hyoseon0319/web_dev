@@ -13,17 +13,17 @@
             background-color: lightblue;
         }
 
-        .px {
+        .px { 
         /* 스크린의 픽셀(pixel)을 기준으로 하는 절대적 크기 */
-            width: 320px;
-            height: 160px;
+            width: 480px; 
+            height: 80px; 
         }
 
         .percent {
          /* 브라우저 크기의 % */
          /* 상위요소에 width나 height가 지정됐을 경우 해당만큼 % 적용 */
             width: 50%;
-            height: 200px;
+            height: 400px;
         }
 
         .em {
@@ -58,6 +58,9 @@
         /* 최대 & 최소 */
         .maxmin {
             /* 300px ~ 600px 사이에서 화면에 50%를 차지하는 요소 */
+            width: 50%;
+            min-width: 300px;
+            max-width: 600px;
         }
     </style>
 
@@ -100,7 +103,7 @@
         상대적으로 크기가 변하는 요소에 대해
         최대&최소값을 지정해 줄 수 있음
     </div>
-    <img style="width: 100%; height: auto; max-width: 800px; max-height: 400px"
+    <img style="width: 50%; height: auto; max-width: 400px; max-height: 200px"
         src="https://cdn.pixabay.com/photo/2020/01/11/13/22/freedom-4757533__480.jpg" alt="">
     
 </body>
