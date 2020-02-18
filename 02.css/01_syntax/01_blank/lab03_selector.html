@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selector</title>
+    <style>
+        p {
+            color : brown;
+        }
+        #myId {
+            font-size: 30px;
+        }
+        .myClass {
+            text-decoration: underline;
+        }
+        div, span, #pId, .newClass {
+        background-color: coral;
+        }
+        .class1 {
+            color: lightseagreen;
+        }
+        
+        .class2 {
+            color: blue !important;
+        /* !important 가 점수를 높혀준다 */
+
+        }
+        /* 클래스 내부의 순서가 아닌 클래스를 먼저 쓰는 순서가 중요  스타일 시트 상에서 스타일 태그 내에서 내가 적용하고자 하는 클래스가 가장 마지막에 있는지가 중요!*/
+
+        /* 태그<클래스선택자<아이디선택자<인라인선택자 */
+        </style>
+</head>
+<body>
+    <h1>선택자(셀렉터)</h1>
+    <h2>태그(tag) 선택자</h2>
+    <p>p태그를 선택해봅시다</p>
+    <p>얘도 선택되구요</p>
+    <p>얘도 선택됩니다</p>
+    <hr><br><br>
+
+    <!-- 아이디 선택자 : 기본키 같은 역할 -->
+    <h2>아이디(id) 선택자</h2>
+    <p id="myId">아이디를 적용할 거에요</p>
+    <!-- <p id="myId">아이디는 두 개 이상도 적용은 됩니다만...</p> -->
+    <p>아이디 없으면 원래대로</p>
+    <br><br>
+
+    <h2>클래스(class) 선택자</h2>
+    <h3>클래스를 적용 전입니다</h3>
+    <h3 class="myClass">클래스를 적용하겠습니다</h3>
+    <h3 class="myClass">클래스를 또 적용하겠습니다</h3>
+    <br><br>
+
+    <h2>그룹(group) 선택자</h2>
+    <div>div입니다</div>
+    <span>span입니다</span>
+    <p id="pId">id를 적용한 p</p>
+    <h4 class="newClass myClass">class를 적용한 h4</h4>
+    <!-- class 2개 지정 (newclass , myclass) -->
+    <p class="class2 class1">이기는 편 내편</p>
+</body>
+</html>

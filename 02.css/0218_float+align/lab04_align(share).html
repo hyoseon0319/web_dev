@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Align</title>
+    <style>
+        /* table 속성 사용 */
+        div.line {
+            height: 100px;
+            background-color: khaki;
+            line-height: 100px;
+            vertical-align: middle;
+        }
+
+        div.table {
+            height: 100px;
+            background-color: lavender;
+            display: table;
+            margin: auto;
+        }
+
+        div.table>div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        /* position & transfrom 속성 사용 */
+        .center {
+            height: 200px;
+            position: relative;
+            border: 3px solid green;
+        }
+
+        .center div {
+            background-color: aqua;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>정렬 (Align)</h1>
+    <h2>수직 정렬</h2>
+    <div class="line" style="overflow: auto;">
+        line-height를 사용해서 수직 정렬Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum quisquam obcaecati dicta alias id dignissimos animi, deleniti facilis expedita eaque velit quia sequi, deserunt doloribus harum. Eveniet architecto aperiam consequatur?
+    </div>
+    <div class="table">
+        <div style="width: 200px; height: 200px; overflow: hidden;">
+            table 속성을 사용해 수직 정렬Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae aut nesciunt hic asperiores praesentium quisquam nulla quia explicabo ullam sapiente perspiciatis reiciendis cupiditate, enim aperiam animi ipsam modi dolorem.
+        </div>
+    </div>
+    <br>
+    <hr>
+    <h2>수직 및 수평 정렬 (position & transfrom)</h2>
+    <div class="center">
+        <div>수평 및 수직 정렬 되었습니다</div>
+    </div>
+</body>
+
+</html>

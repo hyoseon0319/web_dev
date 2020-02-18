@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Link</title>
+    <style>
+        a {
+            font-size: 40px;
+            color: brown;
+        }
+
+        /* 선택자 뒤에 : (콜론) 을 붙이고 특정 이벤트마다 적용할 스타일을 설정할 수 있다. 이를 '가상 클래스' 라고 한다. */
+        a:hover {
+        /* hover(호버)는 커서를 해당 요소에 위치 했을 때 스타일을 지정 */
+
+        background-color:  aqua;
+    }
+
+        a:active {
+            background-color:  yellow;
+
+        }
+
+        a:visited {
+            color: darkblue
+        }
+
+        a:link {
+            color: darkorange
+        }
+
+        div:hover {
+            background-color: darkorchid;
+            color: pink;
+        }
+
+        div:active {
+            background-color : yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>링크 관련 CSS</h1>
+    <a href="https://github.com/">
+        깃허브
+    </a><br>
+    <a href="아무거나">아무거나</a>
+    <div>div 테스트입니다</div>
+</body>
+
+</html>

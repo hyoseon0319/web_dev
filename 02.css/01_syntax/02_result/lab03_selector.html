@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selector</title>
+    <style>
+        p {
+            background-color: aqua;
+        }
+        #myId {
+            background-color: red;
+            font-size: 10px;
+        }
+        .myClass {
+            font-size: 30px;
+            text-align: center;
+        }
+        div, span, #pId, .newClass {
+            color: red;
+        }
+        .class1 {
+            color: red !important;
+        }
+        .class2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <h2>태그(tag) 선택자</h2>
+    <p>p태그를 선택해봅시다</p>
+    <p>얘도 선택되구요</p>
+    <p>얘도 선택됩니다</p>
+    <hr><br><br>
+
+    <h2>아이디(id) 선택자</h2>
+    <p id="myId">아이디를 적용할 거에요</p>
+    <!-- <p id="myId">아이디는 두 개 이상도 적용은 됩니다만...</p> -->
+    <p>아이디 없으면 원래대로</p>
+    <br><br>
+
+    <h2>클래스(class) 선택자</h2>
+    <h3>클래스를 적용 전입니다</h3>
+    <h3 class="myClass">클래스를 적용하겠습니다</h3>
+    <h3 class="myClass">클래스를 또 적용하겠습니다</h3>
+    <br><br>
+
+    <h2>그룹(group) 선택자</h2>
+    <div>div입니다</div>
+    <span>span입니다</span>
+    <p id="pId">id를 적용한 p</p>
+    <h4 class="newClass myClass">class를 적용한 h4</h4>
+
+    <p class="class2 class1">이기는 편 내편</p>
+</body>
+</html>
