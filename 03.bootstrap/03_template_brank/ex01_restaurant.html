@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>맛집 소개 페이지</title>
+    <style>
+        .bg-img {
+            background: url("https://cdn.pixabay.com/photo/2020/01/26/22/55/road-4796107_960_720.jpg") center/cover;
+            background-blend-mode: multiply;
+        }
+
+        .modal-body, .card-text {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 기본 navbar -->
+    <!-- navbar-dark로 하면 글씨체가 흰색, light로 하면 검은색 -->
+    <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"> -->
+    <!-- 상단 고정 navbar -->
+    <!-- fixed-top 상단 고정 / fixed-bottom 하단 고정 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
+        <!-- navbar -->
+        <a class="navbar-brand" href="#">
+            <img src="https://image.flaticon.com/icons/svg/2228/2228252.svg" width="40px" alt="맛있겠다"> 남부터미널 맛집
+        </a>
+        <!-- 가로 768px (md) 미만일 경우 메뉴 내용이 없어지고 햄버거 버튼 속으로 들어감 -->
+        <!-- navbar-expand-**을 수정하여 기준을 바꿀 수 있음 -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.diningcode.com/" target="_blank">Dining Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.mangoplate.com/" target="_blank">Mango Plate</a>
+                </li>
+            </ul>
+            <!-- 검색 버튼 -->
+            <form action="https://www.diningcode.com/isearch.php" class="form-inline mt-2 mt-md-0" target="_blank">
+                <input class="form-control mr-sm-2" type="text" name="query" placeholder="맛집을 찾아보세요!"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">찾기</button>
+            </form>
+        </div>
+    </nav>
+    <header class="jumbotron bg-img mt-5 bg-secondary text-white">
+        <h1 class="display-4">남부터미널</h1>
+        <p class="lead">서울특별시 서초구 효령로 292 (서초동) 소재 시외버스 터미널</p>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            자세히 보기
+        </button>
+    </header>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">남부터미널</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body p-3"><img class="d-block my-3 mx-auto w-75" src="https://lh3.googleusercontent.com/proxy/GdV2euLjqkZW-AAVre9P7e6edzr2dNSkrOeMEsuMfuJveZUw75RxBLreTvmq1_m6V5nyTNBLlobZNEXeRe-6H3ONlm5aagPNxmiR4uQ5libJ" alt="터미널">서울특별시 서초구 효령로 292 (서초동) 소재 시외버스 터미널.
+                원래 이름은 화물터미널이라는 이름의 화물트럭 터미널이었으나 이를 양재동으로 옮기고 버스터미널을 조성하여 용산구에 위치한 용산시외버스터미널의 시외버스 노선들을 이전해 와 현재의 이름으로 변경되었다.
+                인터넷 예매는 티머니 홈페이지에서 가능하다.
+                발매 전산상의 약호는 '서울남부'. '남서울'이라는 호칭도 전국 각지 터미널 시간표, 매표소 등에 많이 사용한다.
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/20190918035949_photo1_caed28462189.jpg"
+                    alt="Card image">
+                <header class="display-4 card-header">
+                    #1
+                </header>
+                <section class="card-body">
+                    <h5 class="card-title font-weight-bold">백년옥 본점</h5>
+                    <div class="card-text small">음식은 건강한 느낌이 나는 맛이고 자극적인 것보다 심심하고 담백한 스타일을 좋아하는 사람에게 맞다.
+                        서비스는 친절하신 편이시다.
+                        분위기는 오래됐지만 깔끔하고 정겨운 느낌.
+                        위생상태는 한식치고 깔끔하며 평균상위에 속한다.
+                    </div>
+                    <a href="https://www.diningcode.com/profile.php?rid=InVGSIiAc3kY"
+                        class="btn btn-primary d-block mx-auto my-3 stretched-link" target="_blank">자세히 보기</a>
+                </section>
+                <footer class="card-footer text-right small">
+                    서울시 서초구 서초3동 1450-6
+                </footer>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/20190919025327_photo3_cd7696e715d5.jpg"
+                    alt="Card image">
+                <header class="display-4 card-header">
+                    #2
+                </header>
+                <section class="card-body">
+                    <h5 class="card-title font-weight-bold">루엘드파리</h5>
+                    <div class="card-text small">아... 진심 순삭... 다쿠아즈랑 치아바타랑 바게트랑 크루아상... 미쳤어요!
+                    맛만보려했는데 다먹음... 남부터미널역 근처에 대로변에 위치해요 ㅉ테이블이 협소해서 테이크아웃이 좋아요 무조건 한번이상 꼭 방문해보세요 후회안해요... 또가고싶어요 흐아ㅠㅠ
+                    </div>
+                    <a href="https://www.diningcode.com/profile.php?rid=woSGqn7GlG8q"
+                        class="btn btn-primary d-block mx-auto my-3 stretched-link" target="_blank">자세히 보기</a>
+                </section>
+                <footer class="card-footer text-right small">
+                    서울시 서초구 서초동 1445-13
+                </footer>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/20190919024057_photo2_cd7696e715d5.jpg"
+                    alt="Card image">
+                <header class="display-4 card-header">
+                    #3
+                </header>
+                <section class="card-body">
+                    <h5 class="card-title font-weight-bold">봉산옥</h5>
+                    <div class="card-text small">남부터미널에 위치한 맛집입니다. 양지 고명이 올라가져 있으며 국물은 매우 담백한 편입니다.
+                    왕큰만두가 5~6개 들어있고 작은 밥공기가 하나 나오는데 만두를 다 건져먹고 그 국물에 밥을 말아먹으면 속이 든든합니다.
+                    추운 겨울 담백한 만두국이 생각난다면 또 방문할 예정입니다.
+                    </div>
+                    <a href="https://www.diningcode.com/profile.php?rid=BUogm42iracN"
+                        class="btn btn-primary d-block mx-auto my-3 stretched-link" target="_blank">자세히 보기</a>
+                </section>
+                <footer class="card-footer text-right small">
+                    서울시 서초구 서초3동 1451-9
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container-fluid mt-3 p-3 text-center bg-secondary text-white">COPYRIGHT &copy; 2020</div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

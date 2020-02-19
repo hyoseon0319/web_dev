@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 복습</title>
+    <!-- 내부 스타일 시트 -->
+    <style>
+        /* 선택자 {
+            프로퍼티: 값;
+            프로퍼티2: 값2} */
+        /* 태그 선택자 = 1점
+            (= 가상 요소 선택자(::)
+            ex: ::placeholder, ::after)
+            */
+         {
+            background-color: ;
+            color: ;
+            /* !important은 !important가 적용되지 않은 다른 어떤 css 프로퍼티보다 우선적으로 적용되게 해준다. !important가 적용된 속성끼리는 나머지 점수가 적용된다.  */
+            /* color: blueviolet!important;  */
+        }
+        /* 클래스 선택자(.) (+10점) 
+            클래스는 여러 요소에 속할 수 있고, 요소들은 여러 클래스를 가질 수 있다. (n 대 m)
+            (= 속성선택자([]),
+            ex: input[type="text"] 가상클래스선택자(:)
+            ex: a:hover, input:focus)
+        */
+         {
+            background-color: ;
+            color: ;
+        }
+        /* 아이디 선택자(#) (+100점) */
+         {
+            background-color: ;
+            color: ;
+        }
+        /* 혼합  */
+        /* 그룹 선택자 (여러 선택자를 일괄) */
+         {
+            text-decoration: ;
+        } 
+        /* bootstrap은 모두 class를 통해 지정되기 때문에 id 속성을 사용하거나, 태그와 class 속성 등을 혼합해준다면 커스터마이징이 쉽게 가능하다 (이후 상술) => 개발자도구를 통해 !important 속성이 지정되었는지 확인 후에... */
+        /* 이외의 선택자들에 대해서 더 알고 싶다면 https://www.codingfactory.net/10792 참고 */
+    </style>
+    <!-- 외부 스타일 시트 -->
+    <!-- link 태그 안에 href로 css 파일 주소를 지정해주는 방식 -->
+    <!-- 부트스트랩 파일을 직접 다운로드 받아서 적용하거나, 웹에서 주소를 넣어 진행할 수 있으며 웹에서 다운로드 받아서 운영하는 방식을 CDN(Content delivery network) 방식이라고도 함 -->
+    <link rel="stylesheet" href="my.css">
+</head>
+<body>
+    <h1>CSS 스타일 (적용법)</h1>
+    <!-- CSS는 세 가지의 적용법이 있음 -->
+    <!-- HTML 요소에 직접 style 속성을 통해 적용하는 인라인 스타일 (+1000점) -->
+    <div style="">
+        인라인 스타일
+    </div>
+    <br>
+    <!-- HTML 파일 내부의 <head> 안에 <style> 태그 속에 css 선택자와 프로퍼티를 추가하는 내부 스타일 시트(특정 HTML에 종속되므로 임베드(embed) 스타일이라고 부름)와, 외부 css 파일에 있는 css를 적용하는 외부 스타일 시트 방식이 있음 (선택자에 따라 다름) -->
+    <!-- 내부 스타일 시트와 외부 스타일 시트 간에 속성 간의 충돌이 있을 경우 각각의 선택자가 '점수'화 되어 처리되며 점수가 동일할 경우 가장 나중에 (html 기준 가장 뒤에) 등장하는 속성이 적용 -->
+    <!-- 이러한 점수화는 명시도(Specificity)라는 기준을 통해서 진행됨 -->
+    <!-- CSS 속성의 자세한 우선순위 https://victorydntmd.tistory.com/190 */ -->
+    <div>
+        내부 스타일 시트 / 외부 스타일 시트
+    </div>
+    <div class="">
+        클래스 선택자 + 태그 선택자
+        div.myClass
+    </div>
+    <div class="" id="">
+        아이디 선택자 + 클래스 선택자 + 태그 선택자
+        div.myClass#myId
+    </div>
+    <span>그룹 선택자1</span>
+    <b>그룹 선택자2</b>
+    <i>그룹 선택자3</i>
+</body>
+</html>

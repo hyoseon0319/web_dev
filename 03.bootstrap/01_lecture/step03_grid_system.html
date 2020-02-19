@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        div {
+            /* div를 구분하기 위한 배경색 지정 */
+            background: lightblue;
+        }
+        /* 자식 선택자를 통해 row 안에 div(col들)에 대한 구분선 지정 */
+        .row > div:not(.w-100) {
+            border: 1px solid grey;
+        }
+        /* row 요소 속에 col 요소들에 대한 배경색을 순서대로 지정 */
+        .row > div:nth-of-type(3n-2) {
+            background: lightgreen;
+        }
+        .row > div:nth-of-type(3n-1) {
+            background: lightyellow;
+        }
+        .row > div:nth-of-type(3n) {
+            background: lightcoral;
+        }
+    </style>
+    <title>Bootstrap Grid System</title>
+</head>
+<body>
+    <h1>그리드 시스템</h1>
+    <hr>
+    <h2>컨테이너(container)</h2>
+    <br>
+    <!-- 컨테이너는 부트 스트랩에서 가장 기본적인 레이아웃 요소로 그리드 시스템을 사용할 때 필요. -->
+    <div class="container">
+        컨테이너 (div.container로 생성)<br>
+        extra-small(576px 미만) : 가로 100%<br>
+        small(576px 이상 ~ 768px 미만) : 가로 540px<br>
+        medium(768px 이상 ~ 992px 미만) : 가로 720px<br>
+        large(992px 이상 ~ 1200px 미만) : 가로 960px<br>
+        extar-large(1200px 이상) : 가로 1140px<br>
+        + 가운데 정렬 (margin:auto)
+    </div>
+    <br>
+    <div class="container-fluid">
+        컨테이너-플루이드 (div.container-fluid로 생성)
+        중단점과 관계 없이 100%로 표시
+    </div>
+    <br>
+    <!-- 중단점(break-point) : 부트스트랩은 화면별로 적절한 레이아웃을 유지하기 위해 특정한 가로 크기를 기준으로
+    레이아웃이 변화할 수 있도록 '중단점'이 존재. 주로 sm, md, lg, xl 등으로 표현하며 위에 작성되어 있는 크기들을 기준으로 함-->
+    <div class="container-sm">div.container-sm (=container)</div>
+    <br>
+    <div class="container-md">div.container-md (md 전까지는 fluid)</div>
+    <br>
+    <div class="container-lg">div.container-lg (lg 전까지는 fluid)</div>
+    <br>
+    <div class="container-xl">div.container-xl (xl 전까지는 fluid)</div>
+    <hr>
+    <div class="container p-3 my-3 border">
+        p-3 : 1rem(기본 16px)만큼 전체 방향으로 padding <br>
+        my-3 : 1rem만큼 y축 (위,아래)로 margin <br>
+        (위=t, 오른쪽=r, 왼쪽=l, 아래=b, x=왼쪽+오른쪽, y=위+아래)
+        <!-- {property}{sides}-{breakpoint}-{size} -->
+        <!-- 자세한 여백 목록 : https://getbootstrap.com/docs/4.4/utilities/spacing/ -->
+        border : 1px solid grey의 구분선 <br>
+        <!-- 자세한 구분선 목록 : https://getbootstrap.com/docs/4.4/utilities/borders/ -->
+    </div>
+    <div class="container p-3 my-3 bg-dark text-white">
+        bg-dark : 검정색 배경색 <br>
+        text-white : 흰색 글씨색 <br>
+        <!-- 자세한 색상 목록 : https://getbootstrap.com/docs/4.4/utilities/colors/ -->
+    </div>
+    <div class="container p-3 my-3 bg-primary text-white">
+        bg-primary : 파란색 배경색 (primary, secondary, ...)
+    </div>
+    <hr>
+    <h2>그리드 클래스</h2>
+    <!-- 그리드(격자) : Bootstrap은 한 컨테이너를 12등분하여 관리.
+        내부는 한 줄을 의미하는 row(행)에 col(열)을 넣어서 구성되게 됨.
+        col에는 중단점과 차지하는 컬럼의 수(최대 12)를 표시하며, 중단점 미만으로 내려갈 경우 해당 컨테이너의 100%를 점유
+        별도로 col을 표시하지 않은 경우 자동으로 남은 열을 배분해서 가져간다.
+        (992px:lg까지는 col-1까지도 자동으로 줄어들지만, md 사이즈부터는 col-2를 기본으로 가져가게 된다.)
+    -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-sm">
+                디스플레이가 576px 이상일 경우 col의 적용을 받음 & 3등분
+            </div>
+            <div class="col-sm">
+                디스플레이가 576px 이상일 경우 col의 적용을 받음 & 3등분
+            </div>
+            <div class="col-sm">
+                디스플레이가 576px 이상일 경우 col의 적용을 받음 & 3등분
+            </div>
+        </div>
+    </div>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-sm-8">
+                col-sm-8
+            </div>
+            <div class="col-sm">
+                lg까지는 1로 줄어듦, md부터는 2 미만으로 내려갈 수 없어서 다음 col을 쫓아냄 (col-4)
+            </div>
+            <div class="col-sm-3">
+                col-sm-3
+            </div>
+        </div>
+    </div>
+    <!-- 중단점 별로 col의 크기를 다르게 줄 수 있음 -->
+    <div class="container my-3">
+        <div class="row">
+
+        </div>
+    </div>
+    <!-- 행을 바꿀 때는 (1) w-100의 요소를 삽입 (2) 새로운 row를 만든다 -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-sm-4">sm-4</div>
+            <div class="col-sm-4">sm-4</div>
+            <div class="col-sm-4">sm-4</div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

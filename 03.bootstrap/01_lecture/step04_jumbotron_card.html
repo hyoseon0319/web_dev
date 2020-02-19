@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Bootstrap Jumbotron & Card</title>
+    <style>
+        .bgimg {
+            /* url의 이미지를 배경 이미지로 + 가운데 위치로 조정 + 가로, 세로 중 긴 위치를 기준으로 배경 이미지 비율을 조정하여 요소가 배경으로 모두 덮일 수 있도록 함 (이미지 짤릴 수 있음) */
+
+            /* 배경색과 이미지 혼합 설정
+                참고 : https://coderap.tistory.com/137
+            */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>주요 레이아웃 요소</h1>
+    <hr class="my-3">
+    <h2 class="mb-4">Jumbotron</h2>
+    <h3>Jumbotron Basic</h3>
+    <div class="">
+        <!-- display : 디스플레이 속성은 일반 제목보다 눈에 띄며 .display-1, .display-2, .display-3, .display- 중에서 선택할 수 있음 -->
+        <h1 class="">반갑습니다!</h1>
+        <!-- lead를 통해 p 태그를 강조해 줄 수 있음 -->
+        <p class="">Jumbotron 요소를 사용해 강조할 내용을 보여줄 수 있습니다.</p>
+        <!-- hr 태그 위 아래로 1.5rem margin 적용 -->
+        <hr class="my-4">
+        <p>글자를 꾸며주거나 공간을 설정해주는 태그를 통해 Jumbotron을 채울 수 있습니다.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">클릭 해 보세요!</a>
+    </div>
+    <h3>Jumbotron Fluid</h3>
+    <div class="">
+        <h1 class="">반갑습니다!</h1>
+        <p class="">Fluid Jumbotron을 사용하면 양 옆 여백과 타원형의 모서리가 없는 요소를 만들어줍니다.</p>
+    </div>
+    <h3>Jumbotron + Image</h3>
+    <div class="bg-secondary text-white bgimg">
+        <h1 class="">반갑습니다!</h1>
+        <p class="">Jumbotron 요소에 배경 이미지를 혼합하면 좀 더 매력적인 소개 페이지를 만들 수 있습니다.</p>
+        <hr class="my-4 border-white">
+        <p>background 속성을 사용하여 원하는 대로 수정해보세요!</p>
+    </div>
+    <hr class="my-3">
+    <h2 class="mb-4">Card</h2>
+    <h3>text card</h3>
+    <div class="m-3">
+        <h5 class="">텍스트 카드</div>
+        <div class="">            
+            <h4 class="">카드 제목</h4>
+            <p class="">텍스트 예시. 텍스트 예시</p>
+            <a href="#" class="">카드 링크</a>
+        </div>
+        <div class="">카드 하단</div>
+    </div>
+    <h3>image card</h3>
+    <div class="w-50 my-3 mx-auto">
+        <img class="" src="https://cdn.pixabay.com/photo/2012/09/04/21/20/penguin-56101__480.jpg" alt="Card image">
+        <div class="">
+            <h4 class="">펭귄</h4>
+            <p class="">펭귄은 펭펭</p>
+            <a href="#" class="btn btn-primary">펭귄 보기</a>
+            <!-- stretched-link : 카드 전체로 버튼 링크 확장 (카드 자체를 버튼으로 쓰기) -->
+        </div>
+    </div>
+    <h3>image overay</h3>
+    <div class="w-50 my-3 mx-auto">
+        <img class="" src="https://cdn.pixabay.com/photo/2012/09/04/21/20/penguin-56101__480.jpg" alt="Card image">
+        <div class="">
+            <h4 class="">펭귄</h4>
+            <p class="">펭귄은 펭펭</p>
+            <a href="#" class="btn btn-primary">펭귄 보기</a>
+        </div>
+    </div>
+    <!-- columns와 deck, group에 속한 카드들에 lorem 넣어보면서 차이점 확인 -->
+    <!-- 카드들은 576px보다 화면이 적어지면 길이가 수평의 100% 차지 -->
+    <h3>card columns</h3>
+    <!-- .card-columns 클래스는 층층이 쌓여진 카드 격자를 만든다 (예 : pinterest). 카드를 삽입하면 그 크기에 따라 레이아웃이 자동으로 조정됨. -->
+    <div class="">
+        <div class="card bg-primary">
+            <div class="card-body text-center">
+                <p class="card-text">첫째 카드</p>
+            </div>
+        </div>
+        <div class="card bg-warning">
+            <div class="card-body text-center">
+                <p class="card-text">둘째 카드</p>
+            </div>
+        </div>
+        <div class="card bg-success">
+            <div class="card-body text-center">
+                <p class="card-text">셋째 카드</p>
+            </div>
+        </div>
+        <div class="card bg-danger">
+            <div class="card-body text-center">
+                <p class="card-text">넷째 카드</p>
+            </div>
+        </div>
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <p class="card-text">다섯째 카드</p>
+            </div>
+        </div>
+        <div class="card bg-info">
+            <div class="card-body text-center">
+                <p class="card-text">여섯째 카드</p>
+            </div>
+        </div>
+    </div>
+    <h3>card deck</h3>
+    <!-- .card-deck 클래스는 높이와 너비가 같은 카드 그리드를 만듦. (가로를 n분) -->
+    <div class="">
+        <div class="card bg-primary">
+          <div class="card-body text-center">
+            <p class="card-text">첫째 카드</p>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <p class="card-text">둘째 카드</p>
+          </div>
+        </div>
+        <div class="card bg-success">
+          <div class="card-body text-center">
+            <p class="card-text">셋째 카드</p>
+          </div>
+        </div>
+        <div class="card bg-danger">
+          <div class="card-body text-center">
+            <p class="card-text">넷째 카드</p>
+          </div>
+        </div>
+      </div>
+    <h3>card group</h3>
+    <!-- .card-group 클래스는 .card-deck과 ​​유사. 차이점은 .card-group 클래스는 각 카드 사이의 왼쪽 및 오른쪽 여백을 제거한다는 것 -->
+    <div class="">
+        <div class="card bg-primary">
+          <div class="card-body text-center">
+            <p class="card-text">첫째 카드</p>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <p class="card-text">둘째 카드</p>
+          </div>
+        </div>
+        <div class="card bg-success">
+          <div class="card-body text-center">
+            <p class="card-text">셋째 카드</p>
+          </div>
+        </div>
+        <div class="card bg-danger">
+          <div class="card-body text-center">
+            <p class="card-text">넷째 카드</p>
+          </div>
+        </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
