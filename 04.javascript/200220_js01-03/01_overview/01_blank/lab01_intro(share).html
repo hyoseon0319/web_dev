@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <style>
+        div {
+            background-color: brown;
+            color: white;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript 기본 기능</h1>
+
+    <h3>HTML 내용 변경</h3>
+    <div id="ex1">before</div>
+    <!-- document.getElementById('아이디명').innerhtml='바꾸고자 하는 내용' -->
+    <!-- JavaScript는 ""(큰따옴표)와 ''(작은따옴표) 혼용해서 사용 -->
+    <button onclick="document.getElementById('ex1').innerHTML='바꾸고자하는 내용'">내용변경</button>
+    <button onclick="document.getElementById('ex1').innerHTML='이전 내용'">되돌리기</button>
+    <hr>
+
+    <h3>HTML 속성 변경</h3>
+    <div id="ex2">TEST</div>
+    <button onclick="document.getElementById('ex2').classList.add('bold')">굵게</button>
+    <button onclick="document.getElementById('ex2').classList.remove('bold')">굵게 삭제</button>
+    <button onclick="document.getElementById('ex2').classList.add('italic')">기울기</button>
+    <button onclick="document.getElementById('ex2').classList.remove('italic')">기울기 삭제</button>
+    <hr>
+
+    <h3>HTML 스타일 변경</h3>
+    <div id="ex3">TEST</div>
+    <!-- button[onclick] -->
+    <button onclick="document.getElementById('ex3').style.visibility='hidden'">안 보이게</button>
+
+    <button onclick="document.getElementById('ex3').style.visibility='visible'">보이게</button>
+    <button onclick="document.getElementById('ex3').style.display='none'">사라지게</button>
+    <button onclick="document.getElementById('ex3').style.display='inline'">인라인</button>
+    <button onclick="document.getElementById('ex3').style.display='block'">블럭</button>
+    <button onclick="document.getElementById('ex3').style.display='inline-block'">인라인블럭</button>
+    <button onclick="document.getElementById('ex3').style.textAlign='right'">오른쪽 정렬</button>
+    <button onclick="document.getElementById('ex3').style.textAlign='left'">왼쪽 정렬</button>
+    <button onclick="document.getElementById('ex3').style.textAlign='center'">가운데 정렬</button>
+    <hr>
+</body>
+
+</html>
